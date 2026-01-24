@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir CR Reddy Educational Institutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #d4a574;
+            --light-bg: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --border-light: #e0e0e0;
+            --success: #27ae60;
+            --warning: #f39c12;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* ============= MAIN CONTENT ============= */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============= CAROUSEL ============= */
+        .carousel-section {
+            margin: 35px 0;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%;
+            height: 0;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .carousel-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 54, 93, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .carousel-overlay h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-overlay p {
+            font-size: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .carousel-arrow {
+            background: rgba(44, 82, 130, 0.75);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(44, 82, 130, 1);
+            transform: scale(1.15);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .dot.active {
+            background: white;
+            width: 28px;
+            border-radius: 6px;
+        }
+
+        /* ============= HERO STATS ============= */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: -40px 20px 40px 20px;
+            position: relative;
+            z-index: 50;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ============= SECTION TITLE ============= */
+        .section {
+            margin: 50px 0;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 35px;
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+            border-radius: 2px;
+        }
+
+        /* ============= INSTITUTIONS SLIDER ============= */
+        .slider-container {
+            background: var(--light-bg);
+            padding: 30px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            gap: 15px;
+            animation: slide 35s linear infinite;
+            padding: 0;
+            will-change: transform;
+        }
+
+        .slider:hover {
+            animation-play-state: paused;
+        }
+
+        /* Adjusted for fully seamless infinite loop */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .institution-logo {
+            flex: 0 0 160px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            text-align: center;
+            padding: 12px 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .institution-logo:hover {
+            border-color: var(--accent);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .institution-logo img {
+            max-width: 75%;
+            max-height: 55px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .institution-logo a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ============= HISTORY SECTION (NEW PROFESSIONAL LAYOUT) ============= */
+
+        .history-section {
+            margin: 60px 0;
+            padding: 50px 0;
+            background: linear-gradient(120deg, #f5f7fb 0%, #ffffff 40%, #f5f7fb 100%);
+        }
+
+        .history-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .history-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
+        .history-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .history-intro-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px 30px;
+            box-shadow: 0 12px 30px rgba(15, 52, 96, 0.15);
+            border: 1px solid rgba(26, 54, 93, 0.08);
+        }
+
+        .history-intro-card h3 {
+            font-size: 18px;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .history-intro-card p {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .history-timeline {
+            margin-top: 20px;
+            border-left: 3px solid rgba(26, 54, 93, 0.12);
+            padding-left: 18px;
+        }
+
+        .history-item {
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .history-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.25);
+        }
+
+        .history-year {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .history-text {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        .history-highlight-card {
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            border-radius: 14px;
+            padding: 24px 24px;
+            color: #ffffff;
+            box-shadow: 0 12px 30px rgba(15, 52, 96, 0.4);
+            position: sticky;
+            top: 100px;
+        }
+
+        .history-highlight-card h3 {
+            font-size: 18px;
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        .history-highlight-card p {
+            font-size: 13px;
+            margin-bottom: 10px;
+            opacity: 0.92;
+        }
+
+        .history-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .history-metric {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+
+        .history-metric span {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            opacity: 0.85;
+        }
+
+        .history-metric strong {
+            display: block;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+
+        /* ============= MANAGEMENT SECTION ============= */
+        .management-section {
+            margin: 50px 0;
+            padding: 40px 0;
+        }
+
+        .president-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .president-card {
+            display: inline-block;
+            width: 100%;
+            max-width: 260px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            border-top: 6px solid var(--accent);
+            border-left: 6px solid var(--primary);
+        }
+
+        .president-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .president-photo {
+            width: 100%;
+            height: 280px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .president-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .president-info {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .president-info h3 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .president-info .role {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .management-members-title {
+            text-align: center;
+            font-size: 24px;
+            color: var(--primary);
+            margin: 50px 0 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .management-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--accent);
+        }
+
+        .member-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-photo {
+            width: 100%;
+            height: 220px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .member-info {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .member-info .role {
+            font-size: 11px;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* ============= FEATURED SECTION ============= */
+        .featured-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 30px;
+            border-radius: 10px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .featured-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .featured-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #c9945f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* ============= RESPONSIVE ============= */
+        @media (max-width: 1024px) {
+            .carousel {
+                padding-bottom: 45%;
+            }
+
+            .institution-logo {
+                flex: 0 0 140px;
+                height: 100px;
+            }
+
+            .history-layout {
+                grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                padding-bottom: 50%;
+            }
+
+            .carousel-overlay h2 {
+                font-size: 28px;
+            }
+
+            .carousel-overlay p {
+                font-size: 14px;
+            }
+
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .institution-logo {
+                flex: 0 0 120px;
+                height: 90px;
+                padding: 10px 6px;
+                font-size: 10px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin: -25px 15px 25px 15px;
+            }
+
+            .stat-card {
+                padding: 18px;
+            }
+
+            .stat-number {
+                font-size: 26px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            .management-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .member-card {
+                border-radius: 6px;
+            }
+
+            .member-photo {
+                height: 180px;
+            }
+
+            .member-info h3 {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .member-info .role {
+                font-size: 10px;
+            }
+
+            .member-info {
+                padding: 12px;
+            }
+
+            .featured-section {
+                padding: 40px 20px;
+            }
+
+            .featured-section h2 {
+                font-size: 24px;
+            }
+
+            .featured-section p {
+                font-size: 14px;
+            }
+
+            .history-section {
+                padding: 35px 10px;
+            }
+
+            .history-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .history-highlight-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel {
+                padding-bottom: 60%;
+            }
+
+            .carousel-overlay {
+                padding: 25px 15px;
+            }
+
+            .carousel-overlay h2 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            .carousel-overlay p {
+                font-size: 12px;
+            }
+
+            .carousel-arrow {
+                width: 34px;
+                height: 34px;
+                font-size: 16px;
+            }
+
+            .carousel-dots {
+                bottom: 12px;
+                gap: 6px;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .dot.active {
+                width: 22px;
+            }
+
+            .section-title {
+                font-size: 18px;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+            }
+
+            .section-title::after {
+                width: 60px;
+                height: 3px;
+            }
+
+            .institution-logo {
+                flex: 0 0 95px;
+                height: 75px;
+                padding: 8px 4px;
+                font-size: 9px;
+                border-radius: 6px;
+            }
+
+            .institution-logo img {
+                max-height: 45px;
+                margin-bottom: 4px;
+            }
+
+            .slider-container {
+                padding: 20px 10px;
+            }
+
+            .slider {
+                gap: 10px;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                margin: -20px 12px 20px 12px;
+                gap: 12px;
+            }
+
+            .stat-card {
+                padding: 15px;
+                border-radius: 6px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+                letter-spacing: 0.3px;
+            }
+
+            .management-section {
+                padding: 30px 0;
+                margin: 35px 0;
+            }
+
+            .management-members-title {
+                font-size: 18px;
+                margin: 30px 0 25px;
+                letter-spacing: 0.3px;
+            }
+
+            .management-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .member-card {
+                border-radius: 6px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            }
+
+            .member-photo {
+                height: 160px;
+            }
+
+            .member-info {
+                padding: 14px;
+            }
+
+            .member-info h3 {
+                font-size: 12px;
+                margin-bottom: 4px;
+                line-height: 1.3;
+            }
+
+            .member-info .role {
+                font-size: 9px;
+                letter-spacing: 0.3px;
+            }
+
+            .featured-section {
+                padding: 30px 15px;
+                margin: 35px 0;
+                border-radius: 8px;
+            }
+
+            .featured-section h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+
+            .featured-section p {
+                font-size: 13px;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+
+            .btn {
+                padding: 10px 24px;
+                font-size: 13px;
+                margin: 0 6px 10px 0;
+                display: inline-block;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            .history-section {
+                padding: 30px 10px;
+                margin: 35px 0;
+            }
+
+            .history-title {
+                font-size: 22px;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+
+            .history-subtitle {
+                font-size: 13px;
+                margin-bottom: 25px;
+            }
+
+            .history-intro-card {
+                padding: 20px 16px;
+            }
+
+            .history-intro-card p {
+                font-size: 13px;
+            }
+
+            .history-highlight-card {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============= HEADER CONTAINER (LOADS AUTOMATICALLY) ============= -->
+    <div id="header-container"></div>
+
+    <!-- ============= MAIN CONTENT (ALL ORIGINAL CODE KEPT AS IS) ============= -->
+    <main>
+        <!-- CAROUSEL -->
+        <section class="carousel-section" id="home">
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-slide active">
+                            <img src="../images/ENGINEERING_COLLEGE_SIR_CRR.jpg" alt="Engineering College">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/POLYTECHNIC_COLLEGE_SIR_CRR.jpg" alt="Polytechnic College">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/PHARMACY_COLLEGE_SIR_CRR.jpg" alt="Pharmacy College">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/WOMENS_COLLEGE_SIR_CRR.jpg" alt="Women's College">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG1.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG2.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG3.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG4.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG5.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG6.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG7.jpeg" alt="Engineering Campus">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/ENGG8.jpeg" alt="Engineering Campus">
+                        </div>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="carousel-arrow" onclick="changeSlide(-1)" title="Previous">❮</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="dot" onclick="currentSlide(9)"></span>
+                            <span class="dot" onclick="currentSlide(10)"></span>
+                            <span class="dot" onclick="currentSlide(11)"></span>
+                        </div>
+                        <button class="carousel-arrow" onclick="changeSlide(1)" title="Next">❯</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERO STATS -->
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Premier Institutions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15K+</div>
+                <div class="stat-label">Active Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1k+</div>
+                <div class="stat-label">Active Staff</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Placement Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80 Years</div>
+                <div class="stat-label">Legacy of Excellence</div>
+            </div>
+        </div>
+
+        <!-- INSTITUTIONS SECTION WITH CONTINUOUS SCROLLING -->
+        <section class="section" id="institutions">
+            <h2 class="section-title">OUR INSTITUTIONS</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <!-- FIRST LOOP -->
+                        <div class="institution-logo">
+                            <a href="https://sircrrengg.ac.in" target="_blank">
+                                <img src="../images/crrengglogo.png" alt="Engineering Logo">
+                                <p>SIR C R Reddy College of Engineering</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrpolytechnic.com/" target="_blank">
+                                <img src="../images/crrpolytechniclogo.png" alt="Polytechnic Logo">
+                                <p>SIR C R Reddy Polytechnic College</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://www.sircrreddycollege.ac.in/" target="_blank">
+                                <img src="../images/crrcollegelogo.png" alt="Degree College Logo">
+                                <p>SIR C R Reddy College (Autonomous)</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrpgcourses.ac.in/" target="_blank">
+                                <img src="../images/pgcourseslogo.png" alt="PG Courses Logo">
+                                <p>SIR C R Reddy PG Courses</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://crreddypublicschool.com/" target="_blank">
+                                <img src="../images/publicschoollogo.png" alt="Public School Logo">
+                                <p>SIR C R Reddy Public School</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrcops.edu.in/" target="_blank">
+                                <img src="../images/pharmacycollegelogo.png" alt="Pharmacy Logo">
+                                <p>SIR C R Reddy College of Pharmacy</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://www.sircrrwomen.ac.in/" target="_blank">
+                                <img src="../images/womensdegreelogo.png" alt="Women's College Logo">
+                                <p>SIR C R Reddy Women's Degree College</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="http://sircrreddycollegeofnursing.org/" target="_blank">
+                                <img src="../images/collegeofnursinglogo.png" alt="Nursing Logo">
+                                <p>SIR C R Reddy College of Nursing</p>
+                            </a>
+                        </div>
+
+                        <!-- DUPLICATE LOOP FOR SEAMLESS CONTINUOUS SCROLL -->
+                        <div class="institution-logo">
+                            <a href="https://sircrrengg.ac.in" target="_blank">
+                                <img src="../images/crrengglogo.png" alt="Engineering Logo">
+                                <p>SIR C R Reddy College of Engineering</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrpolytechnic.com/" target="_blank">
+                                <img src="../images/crrpolytechniclogo.png" alt="Polytechnic Logo">
+                                <p>SIR C R Reddy Polytechnic College</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://www.sircrreddycollege.ac.in/" target="_blank">
+                                <img src="../images/crrcollegelogo.png" alt="Degree College Logo">
+                                <p>SIR C R Reddy College (Autonomous)</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrpgcourses.ac.in/" target="_blank">
+                                <img src="../images/pgcourseslogo.png" alt="PG Courses Logo">
+                                <p>SIR C R Reddy PG Courses</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://crreddypublicschool.com/" target="_blank">
+                                <img src="../images/publicschoollogo.png" alt="Public School Logo">
+                                <p>SIR C R Reddy Public School</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://sircrrcops.edu.in/" target="_blank">
+                                <img src="../images/pharmacycollegelogo.png" alt="Pharmacy Logo">
+                                <p>SIR C R Reddy College of Pharmacy</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="https://www.sircrrwomen.ac.in/" target="_blank">
+                                <img src="../images/womensdegreelogo.png" alt="Women's College Logo">
+                                <p>SIR C R Reddy Women's Degree College</p>
+                            </a>
+                        </div>
+                        <div class="institution-logo">
+                            <a href="http://sircrreddycollegeofnursing.org/" target="_blank">
+                                <img src="../images/collegeofnursinglogo.png" alt="Nursing Logo">
+                                <p>SIR C R Reddy College of Nursing</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRIEF HISTORY SECTION (PROFESSIONAL VERSION - ENTIRE INSTITUTIONS GROUP) -->
+        <section class="history-section" id="history">
+            <h2 class="history-title">BRIEF HISTORY</h2>
+            <p class="history-subtitle">
+                From a single academic initiative in 1945 to a comprehensive educational ecosystem, Sir C.R. Reddy Educational Institutions has grown into a "Mini-University" serving thousands of students across multiple disciplines and educational levels.
+            </p>
+
+            <div class="history-layout">
+                <!-- LEFT: Narrative + Timeline -->
+                <div class="history-intro-card">
+                    <h3>Foundation & Growth</h3>
+                    <p>
+                        In the 1940s, there was a long-felt need for quality higher education in the headquarters of West Godavari District. Late Sri Rao Saheb Damaraju Venkata Rao, the then Chairman of the Municipal Council, Eluru, took the initiative in 1944. The Municipal Council, under his leadership, enlisted the support of philanthropic citizens and collected Rs. 2,17,000 to establish the college.
+                    </p>
+                    <p>
+                        The college was inaugurated on 4th July 1945 by Sir Cattamanchi Ramalinga Reddy, a distinguished educationist and then Vice-Chancellor of Andhra University. The institution was named after him as "Sir C.R. Reddy Municipal College" and began functioning as a second-grade college under Founder Principal Sri D.S. Subrahmanyam.
+                    </p>
+
+                    <div class="history-timeline">
+                        <div class="history-item">
+                            <div class="history-year">1945 – 1970</div>
+                            <div class="history-text">
+                                The college was raised to First Grade status in 1951 with affiliation for B.Sc. and B.Com. courses. The Pre-University course began in 1957, followed by the three-year degree programme in 1958. The Intermediate course was introduced in 1969-70, and postgraduate courses in Commerce were launched in 1971. The word "Municipal" was dropped in 1947, making it a private management institution.
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-year">1971 – 1987</div>
+                            <div class="history-text">
+                                Postgraduate courses in Politics, Economics, and Industrial Relations were started. The prestigious MBA programme began in 1985. New specializations in B.Sc. Computers, B.Sc. Industrial Fisheries, B.A. Social Work, and Vocational courses in Radio & TV and Computers were introduced. B.Ed. and the College of Education were established in 1984, along with a Public School for quality school-level education.
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-year">1987 – 1990s</div>
+                            <div class="history-text">
+                                On 11 May 1987, the UGC accorded Autonomous status to Sir C.R. Reddy College. Sir C.R. Reddy Women's College and Junior College for Women were established in 1987 to cater to women's educational needs. Sir C.R. Reddy Polytechnic was started in 1980 to provide technical and professional education. Sir C.R. Reddy College of Engineering was established in 1989, marking entry into premier engineering education.
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-year">2000s – Present</div>
+                            <div class="history-text">
+                                Sir C.R. Reddy College of Pharmaceutical Sciences was established in November 2007 to meet the demand for pharmacy education. The institution was accredited with NAAC 'A' Grade in 2005 and re-accredited in 2011 and 2017. In 2009-10, it was recognized as a "College with Potential for Excellence (CPE)" by UGC. The institution group now operates 11 institutions including schools, colleges, and professional education centers, serving over 15,000 students annually.
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-year">Legacy & Recognition</div>
+                            <div class="history-text">
+                                Today, Sir C.R. Reddy Educational Institutions stands as a premier "Mini-University" in Andhra Pradesh, recognized for academic excellence, modern infrastructure, advanced laboratories, digital libraries, and a strong alumni network with professionals serving India and abroad. The institution remains committed to quality education with social responsibility and value-based development.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Highlight / Stats Card -->
+                <aside class="history-highlight-card">
+                    <h3>Institutional Network</h3>
+                    <p>
+                        Sir C.R. Reddy Educational Institutions operates a comprehensive group of educational centers offering diverse programmes from school level to postgraduate and professional education.
+                    </p>
+                    <div class="history-metrics">
+                        <div class="history-metric">
+                            <span>Founded</span>
+                            <strong>1945</strong>
+                        </div>
+                        <div class="history-metric">
+                            <span>Autonomous Since</span>
+                            <strong>1987</strong>
+                        </div>
+                        <div class="history-metric">
+                            <span>NAAC Rating</span>
+                            <strong>'A' Grade</strong>
+                        </div>
+                        <div class="history-metric">
+                            <span>Total Institutions</span>
+                            <strong>10+</strong>
+                        </div>
+                        <div class="history-metric">
+                            <span>Student Strength</span>
+                            <strong>15K+</strong>
+                        </div>
+                        <div class="history-metric">
+                            <span>UGC Recognition</span>
+                            <strong>CPE Status</strong>
+                        </div>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 13px; line-height: 1.6; opacity: 0.95;">
+                        The group includes Sir C.R. Reddy College (Autonomous), Polytechnic, Engineering College, Pharmaceutical Sciences, Women's Colleges, College of Education, PG Courses, Public School, and nursing facilities—all under unified educational philosophy of "Education for Larger Life Roles."
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FEATURED SECTION -->
+        <section class="featured-section">
+            <h2>Join Sir C.R. Reddy Educational Institutions</h2>
+            <p>Be a part of our legacy of excellence and holistic development. Explore our diverse programs and vibrant campus life.</p>
+            <a href="#institutions" class="btn">Explore Institutions</a>
+            <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </section>
+    </main>
+
+    <!-- ============= FOOTER CONTAINER (LOADS AUTOMATICALLY) ============= -->
+    <div id="footer-container"></div>
+
+    <!-- ============= LOAD COMPONENTS SCRIPT (LOADS HEADER & FOOTER) ============= -->
+    <script src="js/load-components.js"></script>
+
+    <!-- ============= PAGE-SPECIFIC JAVASCRIPT (ALL ORIGINAL FUNCTIONALITY PRESERVED) ============= -->
+    <script>
+        // Carousel functionality
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        let autoPlayInterval;
+
+        function showSlide(n) {
+            if (n < 0) n = slides.length - 1;
+            if (n >= slides.length) n = 0;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[n].classList.add('active');
+            if (dots[n]) {
+                dots[n].classList.add('active');
+            }
+            currentIndex = n;
+        }
+
+        function currentSlide(n) {
+            clearInterval(autoPlayInterval);
+            showSlide(n);
+            startAutoPlay();
+        }
+
+        function changeSlide(n) {
+            clearInterval(autoPlayInterval);
+            showSlide(currentIndex + n);
+            startAutoPlay();
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 5000);
+        }
+
+        // Initialize carousel
+        showSlide(currentIndex);
+        startAutoPlay();
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

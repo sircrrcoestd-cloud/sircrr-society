@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correspondents - Sir C.R. Reddy Educational Institutions</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0; /* important for header/footer layout */
+    background: linear-gradient(135deg, #f2f6fc, #e3ecff);
+    color: #222;
+}
+
+/* Main wrapper */
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 30px 35px;
+}
+
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.correspondents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+/* Card Design */
+.correspondent-card {
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.correspondent-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.correspondent-photo img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1565c0;
+    margin-bottom: 12px;
+}
+
+.correspondent-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0d47a1;
+    margin-bottom: 6px;
+}
+
+.institution-name {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header loads here -->
+<div id="header-container"></div>
+
+<main>
+<div class="container">
+    <h1>CORRESPONDENTS</h1>
+    <div class="subtitle">Sir C.R. Reddy Educational Institutions</div>
+
+    <div class="correspondents-grid">
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_inter_correspondent.png" alt="Sri Kalagara Sivarama Krishna Prasad">
+            </div>
+            <div class="correspondent-name">Sri Kalagara Sivarama Krishna Prasad</div>
+            <div class="institution-name">Sir C.R. Reddy Intermediate Courses</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_degree_correspondent.png" alt="Dr. K. Sri Vishnu Mohan">
+            </div>
+            <div class="correspondent-name">Dr. K. Sri Vishnu Mohan</div>
+            <div class="institution-name">Sir C.R. Reddy College (Autonomous)</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_pg_correspondent.png" alt="Sri Kanala Srinivas Rao">
+            </div>
+            <div class="correspondent-name">Sri Kanala Srinivas Rao</div>
+            <div class="institution-name">Sir C.R. Reddy PG Courses</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_bed_correspondent.png" alt="Sri Gutta Kasi Viswanadha Rao">
+            </div>
+            <div class="correspondent-name">Sri Gutta Kasi Viswanadha Rao</div>
+            <div class="institution-name">Sir C.R. Reddy College of Education (B.Ed.)</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_school_correspondent.png" alt="Sri V. Raghu Kumar">
+            </div>
+            <div class="correspondent-name">Sri V. Raghu Kumar</div>
+            <div class="institution-name">Sir C.R. Reddy Public School</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_pharmacy_correspondent.png" alt="Sri Maganti Raja Rammohan Rao">
+            </div>
+            <div class="correspondent-name">Sri Chalasani Viswanadha Rao (NANAJI)</div>
+            <div class="institution-name">Sir C.R. Reddy College of Pharmaceutical Sciences</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_womens_degree_correspondent.png" alt="Sri Chalasani Viswanadha Rao">
+            </div>
+            <div class="correspondent-name">Sri Kilaru Prabhakar Rao</div>
+            <div class="institution-name">Sir C.R. Reddy Women’s College</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_nursing_correspondent.png" alt="Sri Paladugu Srirangam">
+            </div>
+            <div class="correspondent-name">Sri Paladugu Srirangam</div>
+            <div class="institution-name">Sir C.R. Reddy College of Nursing</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_poly_correspondent.png" alt="Sri Vempalli kaliki Satyanarayana (TATAJI)">
+            </div>
+            <div class="correspondent-name">Sri Vempalli kaliki Satyanarayana (TATAJI) </div>
+            <div class="institution-name">Sir C.R. Reddy Polytechnic</div>
+        </div>
+
+        <div class="correspondent-card">
+            <div class="correspondent-photo">
+                <img src="../correspondents-images/crr_engineering_correspondent.png" alt="Sri Jasti Mallikharjunudu (Malli Babu)">
+            </div>
+            <div class="correspondent-name">Sri Jasti Mallikharjunudu (Malli Babu)</div>
+            <div class="institution-name">Sir C.R. Reddy College of Engineering</div>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<!-- Footer loads here -->
+<div id="footer-container"></div>
+
+<!-- Load components -->
+<script src="js/load-components.js"></script>
+
+</body>
+</html>

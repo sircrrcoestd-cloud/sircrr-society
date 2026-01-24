@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sir CR Reddy Educational Institutions</title>
+    
+    <!-- INCLUDE CSS VARIABLES (SAME AS HEADER/FOOTER) -->
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #d4a574;
+            --light-bg: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --border-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============= HEADER CONTAINER ============= -->
+    <div id="header-container">
+        <!-- Header will be loaded here -->
+    </div>
+
+    <!-- ============= MAIN CONTENT ============= -->
+    <main>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="color: var(--primary); margin-bottom: 20px;">About Us</h1>
+            
+            <section style="margin: 40px 0; padding: 30px; background: var(--light-bg); border-radius: 8px;">
+                <h2 style="color: var(--secondary); margin-bottom: 15px;">Our Story</h2>
+                <p style="line-height: 1.8; color: var(--text-dark);">
+                    Sir C.R. Reddy Educational Institutions was founded in 1945 with a vision to provide 
+                    quality education to students. Over the decades, we have grown into a premier educational group 
+                    offering diverse programs from school level to postgraduate and professional education.
+                </p>
+            </section>
+
+            <section style="margin: 40px 0; padding: 30px; background: var(--light-bg); border-radius: 8px;">
+                <h2 style="color: var(--secondary); margin-bottom: 15px;">Our Mission</h2>
+                <p style="line-height: 1.8; color: var(--text-dark);">
+                    To provide comprehensive, quality education that develops informed, skilled, and responsible 
+                    citizens capable of contributing to societal progress and global excellence.
+                </p>
+            </section>
+
+            <section style="margin: 40px 0; padding: 30px; background: var(--light-bg); border-radius: 8px;">
+                <h2 style="color: var(--secondary); margin-bottom: 15px;">Why Choose Us?</h2>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li>80+ years of educational excellence</li>
+                    <li>World-class infrastructure and laboratories</li>
+                    <li>Experienced and dedicated faculty</li>
+                    <li>Strong alumni network</li>
+                    <li>95% placement rate</li>
+                    <li>NAAC 'A' Grade accreditation</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- ============= FOOTER CONTAINER ============= -->
+    <div id="footer-container">
+        <!-- Footer will be loaded here -->
+    </div>
+
+    <!-- ============= LOAD COMPONENTS SCRIPT ============= -->
+    <!-- IMPORTANT: This script must be at the END of body tag -->
+    <script src="js/load-components.js"></script>
+
+</body>
+</html>
+
+
+<!-- ============= EXAMPLE 2: CONTACT.HTML ============= -->
+<!-- Another example showing different page structure -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sir CR Reddy Educational Institutions</title>
+    
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #d4a574;
+            --light-bg: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --border-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .contact-form {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-light);
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #c9945f;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER CONTAINER -->
+    <div id="header-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="contact-container">
+            <h1 style="color: var(--primary); margin-bottom: 20px;">Contact Us</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0;">
+                <!-- Contact Information -->
+                <div>
+                    <h3 style="color: var(--secondary); margin-bottom: 20px;">Get in Touch</h3>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent); margin-bottom: 8px;">Address</h4>
+                        <p>Eluru, Andhra Pradesh, India</p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent); margin-bottom: 8px;">Phone</h4>
+                        <p><a href="tel:+91XXXXXXXXXX" style="color: var(--primary); text-decoration: none;">+91-XXXXXXXXXX</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent); margin-bottom: 8px;">Email</h4>
+                        <p><a href="mailto:info@sircrreddy.edu.in" style="color: var(--primary); text-decoration: none;">info@sircrreddy.edu.in</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent); margin-bottom: 8px;">Office Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form">
+                    <h3 style="color: var(--secondary); margin-bottom: 20px;">Send Message</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER CONTAINER -->
+    <div id="footer-container"></div>
+
+    <!-- LOAD COMPONENTS SCRIPT -->
+    <script src="js/load-components.js"></script>
+
+</body>
+</html>

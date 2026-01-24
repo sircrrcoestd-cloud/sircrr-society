@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management Committee - Sir C.R. Reddy Educational Institutions</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0; /* required for header/footer layout */
+    background: linear-gradient(135deg, #f2f6fc, #e3ecff);
+    color: #222;
+}
+
+/* Main wrapper */
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 30px 35px;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+h2 {
+    margin-top: 35px;
+    color: #1a237e;
+    font-size: 21px;
+    border-left: 6px solid #1a237e;
+    padding-left: 10px;
+}
+
+/* Leadership Section */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.leadership-card {
+    display: flex;
+    gap: 16px;
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    padding: 16px;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.leadership-photo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1565c0;
+}
+
+.leadership-info h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #0d47a1;
+}
+
+.role {
+    font-weight: 600;
+    color: #1565c0;
+    margin: 4px 0 6px;
+    font-size: 14px;
+}
+
+.leadership-info p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #444;
+}
+
+/* Management Committee Section */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.member-card {
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.member-photo img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1565c0;
+    margin-bottom: 10px;
+}
+
+.member-info h3 {
+    margin: 6px 0 4px;
+    font-size: 16px;
+    color: #0d47a1;
+}
+
+.member-info .role {
+    font-size: 13.5px;
+    color: #1565c0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header loads here -->
+<div id="header-container"></div>
+
+<main>
+<div class="container">
+    <h1>OFFICE BEARERS</h1>
+    <div class="subtitle">Sir C.R. Reddy Educational Institutions</div>
+
+    <div class="leadership-grid">
+
+        <div class="leadership-card">
+            <div class="leadership-photo">
+                <img src="../members-images/president.jpg" alt="Dr. Alluri Indra Kumar">
+            </div>
+            <div class="leadership-info">
+                <h3>Dr. Alluri Indra Kumar</h3>
+                <p class="role">President</p>
+                <p>Continuing the legacy with vision and commitment to educational excellence and student development.</p>
+            </div>
+        </div>
+
+        <div class="leadership-card">
+            <div class="leadership-photo">
+                <img src="../members-images/vice-president-1.jpg" alt="Dr. Vadlapatla Venkata Bala Krishna Rao">
+            </div>
+            <div class="leadership-info">
+                <h3>Dr. Vadlapatla Venkata Bala Krishna Rao</h3>
+                <p class="role">Vice President</p>
+                <p>Dedicated to advancing educational standards and institutional development initiatives.</p>
+            </div>
+        </div>
+
+        <div class="leadership-card">
+            <div class="leadership-photo">
+                <img src="../members-images/vice-president-2.jpg" alt="Sri Adusmilli Venkata Subrahmanyam">
+            </div>
+            <div class="leadership-info">
+                <h3>Sri Adusmilli Venkata Subrahmanyam</h3>
+                <p class="role">Vice President</p>
+                <p>Supporting strategic planning and institutional growth across all educational verticals.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="management-grid">
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="../members-images/secretary.jpg" alt="Dr. Maganti Bhuvana Surendra Venkata Vara Prasada Rao">
+            </div>
+            <div class="member-info">
+                <h3>Dr. M.B.S.V.V Prasad</h3>
+                <p class="role">Secretary</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="../members-images/joint-secretary-1.jpg" alt="Sri Vankineni Bhanu Prakash">
+            </div>
+            <div class="member-info">
+                <h3>Sri Vankineni Bhanu Prakash</h3>
+                <p class="role">Joint Secretary</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="../members-images/joint-secretary-2.jpg" alt="Sri Vallabhaneni Sree Krishna">
+            </div>
+            <div class="member-info">
+                <h3>Sri Vallabhaneni Sree Krishna</h3>
+                <p class="role">Joint Secretary</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="../members-images/treasurer.jpg" alt="Sri B.B.V.V Prasada Rao">
+            </div>
+            <div class="member-info">
+                <h3>Sri B.B.V.V Prasada Rao</h3>
+                <p class="role">Treasurer</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<!-- Footer loads here -->
+<div id="footer-container"></div>
+
+<!-- Load components -->
+<script src="js/load-components.js"></script>
+
+</body>
+</html>

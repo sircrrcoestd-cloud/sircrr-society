@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advisor - Sir CRR Educational Institutions</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f2f6fc, #e3ecff);
+    margin: 0;
+    padding: 0; /* removed extra padding to align with header/footer */
+    color: #222;
+}
+
+/* Main Content Wrapper */
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 30px 35px;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Profile Section */
+.profile-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+/* Photo */
+.profile-photo {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #1565c0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Info Table */
+.profile-info {
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    padding: 22px 24px;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    color: #0d47a1;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e1e8ff;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #1a237e;
+    font-size: 14.5px;
+}
+
+.value {
+    font-size: 14.5px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Experience Section */
+.section-title {
+    margin-top: 30px;
+    color: #1a237e;
+    font-size: 20px;
+    border-left: 6px solid #1a237e;
+    padding-left: 10px;
+}
+
+.experience-box {
+    margin-top: 12px;
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    padding: 18px 22px;
+}
+
+.experience-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-box li {
+    margin-bottom: 8px;
+    font-size: 14.5px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header loads here -->
+<div id="header-container"></div>
+
+<main>
+<div class="container">
+    <h1>Institutional Advisor</h1>
+    <div class="subtitle">Sir CRR Educational Institutions</div>
+
+    <div class="profile-card">
+        <!-- Photo -->
+        <div class="profile-photo">
+            <img src="../members-images/advisor.png" alt="Kasukurti Sreemannarayana">
+        </div>
+
+        <!-- Personal Information -->
+        <div class="profile-info">
+            <h2>KASUKURTI SREEMANNARAYANA</h2>
+
+            <div class="info-row">
+                <div class="label">Date of Birth</div>
+                <div class="value">01-07-1947</div>
+            </div>
+
+            <div class="info-row">
+                <div class="label">Age</div>
+                <div class="value">78 Years</div>
+            </div>
+
+            <div class="info-row">
+                <div class="label">Educational Qualifications</div>
+                <div class="value">M.Com., M.Phil.</div>
+            </div>
+
+            <div class="info-row">
+                <div class="label">Residential Address</div>
+                <div class="value">
+                    11-123, KSR Thota, Gavaravaram,<br>
+                    Eluru - 534003, W.G. Dist., A.P.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teaching Experience -->
+    <h2 class="section-title">Teaching Experience</h2>
+    <div class="experience-box">
+        <ul>
+            <li>Worked as Lecturer in the P.G. Department of Commerce, Sir CRR College, Eluru from May 1973 to June 2005. (Taught M.Com. and M.B.A. students)</li>
+            <li>Worked as Principal, Sir CRR College, Eluru during 2004 - 2005.</li>
+            <li>Retired from service on 30.06.2005.</li>
+        </ul>
+    </div>
+
+    <!-- Administrative Experience -->
+    <h2 class="section-title">Administrative Experience</h2>
+    <div class="experience-box">
+        <ul>
+            <li>Worked as Administrative Officer, Sir CRR Educational Institutions, Eluru from 01.07.2005 to 06.10.2017.</li>
+            <li>Presently working as Advisor, Sir CRR Educational Institutions, Eluru from 01.06.2019.</li>
+        </ul>
+    </div>
+
+</div>
+</main>
+
+<!-- Footer loads here -->
+<div id="footer-container"></div>
+
+<!-- Load components -->
+<script src="js/load-components.js"></script>
+
+</body>
+</html>

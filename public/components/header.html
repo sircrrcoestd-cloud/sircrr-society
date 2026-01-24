@@ -1,0 +1,475 @@
+<!-- ============= HEADER.HTML ============= -->
+<!-- Include this file in your pages using: <link rel="import" href="header.html"> -->
+<!-- Or use JavaScript fetch to load it dynamically -->
+
+<style>
+    /* ============= ROOT VARIABLES ============= */
+    :root {
+        --primary: #1a365d;
+        --secondary: #2c5282;
+        --accent: #d4a574;
+        --light-bg: #f8f9fa;
+        --text-dark: #1a1a1a;
+        --text-muted: #666;
+        --border-light: #e0e0e0;
+        --success: #27ae60;
+        --warning: #f39c12;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: #fff;
+    }
+
+    /* ============= UTILITY NAVIGATION ============= */
+    .utility-nav {
+        background: var(--primary);
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .utility-nav a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .utility-nav a:hover {
+        color: var(--accent);
+    }
+
+    .utility-nav span {
+        margin: 0 10px;
+    }
+
+    /* ============= HEADER ============= */
+    header {
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-area img {
+        height: 100px;
+        width: auto;
+        background: white;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .title-area h1 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        margin: 0;
+        color: white;
+    }
+
+    .title-area p {
+        font-size: 13px;
+        margin-top: 3px;
+        opacity: 0.95;
+        font-weight: 500;
+    }
+
+    .title-area h3 {
+        font-size: 14px;
+    }
+
+    /* ============= MOBILE MENU TOGGLE ============= */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    /* ============= NAVIGATION STYLES ============= */
+    nav {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        position: relative;
+        flex: 1;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px 18px;
+        text-decoration: none;
+        color: var(--secondary);
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--primary);
+        border-bottom-color: var(--accent);
+        background: rgba(212, 165, 116, 0.05);
+    }
+
+    /* Dropdown Styles */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 300px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-top: 4px solid var(--accent);
+        z-index: 1000;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-size: 13px;
+        border-left: 4px solid transparent;
+        text-align: left;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background: var(--light-bg);
+        border-left-color: var(--accent);
+        color: var(--primary);
+        padding-left: 25px;
+    }
+
+    /* ============= RESPONSIVE ============= */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        header {
+            position: relative;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .header-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            flex-direction: row;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .logo-area img {
+            height: 48px;
+            min-width: 48px;
+        }
+
+        .title-area h1 {
+            font-size: 18px;
+            letter-spacing: 0.8px;
+        }
+
+        .title-area p {
+            font-size: 11px;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .nav-item {
+            flex: none;
+            width: 100%;
+        }
+
+        .nav-link {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .dropdown-menu {
+            position: static;
+            display: none;
+            box-shadow: none;
+            border: none;
+            background: var(--light-bg);
+            min-width: auto;
+        }
+
+        .nav-item.active .dropdown-menu {
+            display: block;
+        }
+
+        .nav-link {
+            padding: 12px 12px;
+            font-size: 11px;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 16px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .utility-nav {
+            flex-direction: column;
+            gap: 6px;
+            padding: 8px 12px;
+            font-size: 11px;
+        }
+
+        .utility-nav span {
+            margin: 0;
+        }
+
+        .header-content {
+            padding: 0 12px;
+        }
+
+        .logo-area {
+            gap: 10px;
+        }
+
+        .logo-area img {
+            height: 44px;
+            min-width: 44px;
+        }
+
+        .title-area h1 {
+            font-size: 15px;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+        }
+
+        .title-area p {
+            font-size: 10px;
+            margin-top: 2px;
+        }
+
+        .menu-toggle {
+            font-size: 22px;
+        }
+    }
+</style>
+
+    <!-- HEADER (UNTOUCHED) -->
+    <header>
+        <div class="header-content">
+            <div class="logo-area">                       
+                <img src="../images/LOGO_SIR_CRR.png" alt="Logo">
+                <div class="title-area">
+                    <h1>Sir CATTAMANCHI RAMALINGA REDDY EDUCATIONAL INSTITUTIONS</h1>
+                    <h3>(Regd. No. of the Society 10/1950)</h3>
+                    <p>Eluru, Andhra Pradesh</p>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </header>
+
+    <!-- NAVIGATION (UNTOUCHED) -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">ABOUT US</a>
+                    <div class="dropdown-menu">
+                        <a href="#about-society">Institution Vision & Mission</a>
+                        <a href="founders.html">About Founders</a>
+                        <a href="successionpresidents.html">Succession List of Presidents</a>
+                        <a href="successionsecretaries.html">Succession List of Secretaries</a>
+                        <a href="#values">Core Values</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#admin" class="nav-link">ADMINISTRATION</a>
+                    <div class="dropdown-menu">
+                        <a href="officebearers.html">Office Bearers</a>
+                        <a href="managementcommitee.html">Management Committee</a>
+                        <a href="correspondents.html">Correspondents</a>
+                        <a href="advisor.html">Advisor</a>
+                        <a href="principals.html">Principals</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#institutions" class="nav-link">OUR INSTITUTIONS</a>
+                    <div class="dropdown-menu">
+                        <a href="https://www.sircrreddycollege.ac.in/" target="_blank">Sir C.R Reddy College (Autonomous)(1945)</a>
+                        <a href="https://sircrrpgcourses.ac.in/" target="_blank">Sir C.R Reddy P.G. Courses (1971)</a>
+                        <a href="https://sircrrpolytechnic.com/" target="_blank">Sir C.R Reddy Polytechnic (1980)</a>
+                        <a href="https://crreddypublicschool.com/" target="_blank">Sir C.R Reddy Public School (1984)</a>
+                        <a href="" target="_blank">Sir C.R Reddy College of Education (1984)</a>
+                        <a href="https://sircrrengg.ac.in" target="_blank">Sir C.R Reddy Junior College for Women (1987)</a>
+                        <a href="https://www.sircrrwomen.ac.in/" target="_blank">Sir C.R Reddy Degree College for Women (1987)</a>
+                        <a href="https://sircrrengg.ac.in" target="_blank">Sir C.R Reddy College Of Engineering (Autonomous) (1989)</a>
+                        <a href="https://sircrrcops.edu.in/" target="_blank">Sir C.R Reddy College of Pharmaceutical Sciences (Autonomous) (2007)</a>
+                        <a href="http://sircrreddycollegeofnursing.org/" target="_blank">Sir C.R Reddy College of Nursing (2018)</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#student-life" class="nav-link">STUDENT LIFE</a>
+                    <div class="dropdown-menu">
+                        <a href="#sports">Sports & Recreation</a>
+                        <a href="#hostel">Hostel Facilities</a>
+                        <a href="#scholarships">Scholarships</a>
+                        <a href="#alumni">Alumni Network</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#placements" class="nav-link">PLACEMENTS</a>
+                    <div class="dropdown-menu">
+                        <a href="#placement-stats">Placement Statistics</a>
+                        <a href="#placement-stats">Training & Placement officers</a>
+                        <a href="#recruiters">Top Recruiters</a>
+                        <a href="#training">Training Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">CONTACT US</a>
+                    <div class="dropdown-menu">
+                        <a href="#contact-form">Get in Touch</a>
+                        <a href="#campus-location">Campus Location</a>
+                        <a href="#directions">Directions</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('navMenu').classList.remove('active');
+        });
+    });
+
+    // Mobile dropdown toggle
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (this.querySelector('.dropdown-menu')) {
+                    e.preventDefault();
+                    this.classList.toggle('active');
+                }
+            }
+        });
+    });
+
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                const element = document.querySelector(href);
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>

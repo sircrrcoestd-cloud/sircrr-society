@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management Committee - Sir C.R. Reddy Educational Institutions</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f2f6fc, #e3ecff);
+    color: #222;
+}
+
+/* Main wrapper */
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 30px 35px;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+h2 {
+    margin-top: 35px;
+    color: #1a237e;
+    font-size: 21px;
+    border-left: 6px solid #1a237e;
+    padding-left: 10px;
+}
+
+/* Grid */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+/* Normal Member Card */
+.member-card {
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.member-photo img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1565c0;
+    margin-bottom: 10px;
+}
+
+.member-info h3 {
+    margin: 6px 0 4px;
+    font-size: 16px;
+    color: #0d47a1;
+}
+
+/* GOLD Office Bearers */
+.office-bearer {
+    background: linear-gradient(135deg, #fff8e1, #ffe082);
+    border: 2px solid #d4af37;
+}
+
+.office-bearer .member-photo img {
+    border: 3px solid #d4af37;
+}
+
+.office-bearer h3 {
+    color: #8d6e00;
+}
+
+.role {
+    font-size: 13.5px;
+    color: #8d6e00;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header-container"></div>
+
+<main>
+<div class="container">
+    <h1>MANAGEMENT COMMITTEE</h1>
+    <div class="subtitle">Sir C.R. Reddy Educational Institutions</div>
+
+    <div class="management-grid">
+
+        <!-- 1 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/president.jpg" alt="Dr. Alluri Indra Kumar">
+            </div>
+            <div class="member-info">
+                <h3>Dr. Alluri Indra Kumar</h3>
+                <p class="role">President</p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/vice-president-1.jpg" alt="Dr. V.V. Bala Krishna Rao">
+            </div>
+            <div class="member-info">
+                <h3>Dr. V.V. Bala Krishna Rao</h3>
+                <p class="role">Vice President</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/vice-president-2.jpg" alt="Sri A.V. Subrahmanyam">
+            </div>
+            <div class="member-info">
+                <h3>Sri A.V. Subrahmanyam</h3>
+                <p class="role">Vice President</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/secretary.jpg" alt="Dr. M.B.S.V. Prasad">
+            </div>
+            <div class="member-info">
+                <h3>Dr. M.B.S.V. Prasad</h3>
+                <p class="role">Secretary</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/joint-secretary-1.jpg" alt="Sri Vankineni Bhanu Prakash">
+            </div>
+            <div class="member-info">
+                <h3>Sri Vankineni Bhanu Prakash</h3>
+                <p class="role">Joint Secretary</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/joint-secretary-2.jpg" alt="Sri Vallabhaneni Sree Krishna">
+            </div>
+            <div class="member-info">
+                <h3>Sri Vallabhaneni Sree Krishna</h3>
+                <p class="role">Joint Secretary</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="member-card office-bearer">
+            <div class="member-photo">
+                <img src="../members-images/treasurer.jpg" alt="Sri B.B.V.V. Prasada Rao">
+            </div>
+            <div class="member-info">
+                <h3>Sri B.B.V.V. Prasada Rao</h3>
+                <p class="role">Treasurer</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="management-grid">
+
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member1.jpg"></div><div class="member-info"><h3>Sri Chitturi Janakiramayya</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member2.jpg"></div><div class="member-info"><h3>Sri Kodali Venkata Subba Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member3.jpg"></div><div class="member-info"><h3>Sri Kilaru Prabhakar Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member4.jpg"></div><div class="member-info"><h3>Sri Akkineni Venkateswara Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member5.jpg"></div><div class="member-info"><h3>Dr. K.S. Vishnu Mohan</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member6.jpg"></div><div class="member-info"><h3>Sri Jasti Mallikharjunudu</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member7.jpg"></div><div class="member-info"><h3>Sri Vempalli Kaliki Satyanarayana</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member8.jpg"></div><div class="member-info"><h3>Sri Paladugu Srirangam</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member9.jpg"></div><div class="member-info"><h3>Sri Chalasani Viswanadha Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member10.jpg"></div><div class="member-info"><h3>Sri Gurazada Srikanth</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member11.jpg"></div><div class="member-info"><h3>Sri Jasti Sri Ram</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member12.jpg"></div><div class="member-info"><h3>Sri Kanala Srinivasa Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member13.jpg"></div><div class="member-info"><h3>Sri Vankineni Raghu Kumar</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member14.jpg"></div><div class="member-info"><h3>Sri K. Sivarama Krishna Prasad</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member15.jpg"></div><div class="member-info"><h3>Sri K. Harirama Krishnama Raju</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member16.jpg"></div><div class="member-info"><h3>Sri Appaka Ram Babu</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member17.jpg"></div><div class="member-info"><h3>Sri Gutta Kasi Viswanadha Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member18.jpg"></div><div class="member-info"><h3>Sri Chava Gokul</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member19.jpg"></div><div class="member-info"><h3>Sri K. Sreenath Chowdary</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member20.jpg"></div><div class="member-info"><h3>Sri Javvaji Mohan Vittal</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member21.jpg"></div><div class="member-info"><h3>Sri D.V. Subba Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member22.jpg"></div><div class="member-info"><h3>Dr. M.L.V. Prasad</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member23.jpg"></div><div class="member-info"><h3>Sri Vema Koteswara Rao</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member24.jpg"></div><div class="member-info"><h3>Sri K.L. Krishna Prasad</h3></div><p class="role">member</p></div>
+        <div class="member-card"><div class="member-photo"><img src="../members-images/member25.jpg"></div><div class="member-info"><h3>Sri Badeti Venkatramaiyah</h3></div><p class="role">member</p></div>
+
+    </div>
+</div>
+</main>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
+<script src="js/load-components.js"></script>
+
+</body>
+</html>

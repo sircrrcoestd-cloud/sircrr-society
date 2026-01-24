@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders & Visionaries - Sir C.R. Reddy Institutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============= CORE STYLES ============= */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #d4a574;
+            --light-bg: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --border-light: #e0e0e0;
+            --primary-brown: #a0522d;
+            --primary-teal: #008b8b;
+            --dark-blue: #1a237e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #fff; 
+        }
+
+        /* ============= UTILITY NAVIGATION ============= */
+        .utility-nav { 
+            background: var(--primary); 
+            color: white; 
+            padding: 10px 20px; 
+            display: flex; 
+            justify-content: flex-end; 
+            gap: 20px; 
+            font-size: 13px; 
+            flex-wrap: wrap;
+        }
+
+        .utility-nav a { 
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s ease;
+        }
+
+        .utility-nav a:hover {
+            color: var(--accent);
+        }
+
+        .utility-nav span {
+            margin: 0 10px;
+        }
+
+        /* ============= HEADER ============= */
+        header { 
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); 
+            color: white; 
+            padding: 20px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); 
+        }
+
+        .header-content { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        }
+
+        .logo-area { 
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+            flex: 1;
+        }
+
+        .logo-area img {
+            height: 100px;
+            width: auto;
+            background: white;
+            padding: 5px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .title-area h1 { 
+            font-size: 28px; 
+            font-weight: 700; 
+            margin: 0; 
+            letter-spacing: 1.2px;
+        }
+
+        .title-area p { 
+            font-size: 13px; 
+            margin-top: 3px; 
+            opacity: 0.95; 
+            font-weight: 500;
+        }
+
+        /* ============= NAVIGATION STYLES ============= */
+        nav { 
+            background: white; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .nav-container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .nav-menu { 
+            display: flex; 
+            list-style: none; 
+            width: 100%; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .nav-item { 
+            position: relative; 
+            flex: 1; 
+        }
+
+        .nav-link { 
+            display: block; 
+            padding: 15px 18px; 
+            text-decoration: none; 
+            color: var(--secondary); 
+            font-size: 13px; 
+            font-weight: 600; 
+            text-align: center; 
+            border-bottom: 3px solid transparent; 
+            transition: all 0.3s ease; 
+        }
+
+        .nav-link:hover { 
+            color: var(--primary); 
+            border-bottom-color: var(--accent); 
+            background: rgba(212, 165, 116, 0.05); 
+        }
+
+        /* Dropdown Styles */
+        .dropdown-menu { 
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            background: white; 
+            min-width: 300px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+            border-top: 4px solid var(--accent); 
+            z-index: 1000;
+            border-radius: 6px; 
+            overflow: hidden;
+        }
+
+        .nav-item:hover .dropdown-menu { 
+            display: block; 
+            animation: slideDown 0.3s ease; 
+        }
+
+        @keyframes slideDown { 
+            from { 
+                opacity: 0; 
+                transform: translateY(-10px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        }
+
+        .dropdown-menu a { 
+            display: block; 
+            padding: 12px 20px; 
+            color: var(--text-dark); 
+            text-decoration: none; 
+            font-size: 13px; 
+            border-left: 4px solid transparent; 
+            text-align: left; 
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu a:hover { 
+            background: var(--light-bg); 
+            border-left-color: var(--accent); 
+            color: var(--primary); 
+            padding-left: 25px; 
+        }
+
+        /* ============= MOBILE MENU TOGGLE ============= */
+        .menu-toggle { 
+            display: none; 
+            background: none; 
+            border: none; 
+            color: white; 
+            font-size: 24px; 
+            cursor: pointer; 
+            z-index: 200;
+        }
+
+        /* ============= MAIN CONTENT ============= */
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+
+        .main-header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: white; 
+            margin-bottom: 30px; 
+        }
+
+        .main-header h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; 
+            color: var(--primary-brown); 
+            text-transform: uppercase; 
+            margin-bottom: 10px;
+        }
+
+        .main-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ============= SECTION BLOCKS ============= */
+        .section-block { 
+            background: #fff; 
+            margin-bottom: 40px; 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+
+        .section-header-strip { 
+            background: linear-gradient(90deg, #bf4b38 0%, #a0522d 100%); 
+            color: white; 
+            padding: 15px 30px; 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.5rem; 
+            border-left: 8px solid #8b3a26; 
+            font-weight: 700;
+        }
+
+        .section-header-strip.teal { 
+            background: linear-gradient(90deg, #008b8b 0%, #00695c 100%); 
+            border-left: 8px solid #004d40; 
+        }
+
+        .section-header-strip.blue { 
+            background: linear-gradient(90deg, #1a4d6d 0%, #0d2b3e 100%); 
+            border-left: 8px solid #000; 
+        }
+
+        .content-wrapper { 
+            padding: 40px; 
+        }
+
+        .content-wrapper p {
+            margin-bottom: 15px;
+        }
+
+        .grid-2-col { 
+            display: grid; 
+            grid-template-columns: 1fr 1.5fr; 
+            gap: 40px; 
+            align-items: start;
+        }
+
+        .grid-2-col.reverse { 
+            grid-template-columns: 1.5fr 1fr; 
+        }
+
+        .portrait-frame { 
+            text-align: center;
+        }
+
+        .portrait-frame img { 
+            width: 100%; 
+            max-width: 350px; 
+            border-radius: 4px; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+            border: 1px solid #ddd; 
+        }
+
+        .portrait-caption {
+            margin-top: 10px;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .teal-box { 
+            border: 2px solid var(--primary-teal); 
+            border-radius: 8px; 
+            margin-top: 20px; 
+        }
+
+        .teal-sidebar { 
+            background: var(--primary-teal); 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+            font-family: 'Playfair Display', serif; 
+        }
+
+        .teal-content { 
+            padding: 20px; 
+            font-size: 0.95rem; 
+        }
+
+        .teal-content ul {
+            padding-left: 20px;
+        }
+
+        .teal-content li {
+            margin-bottom: 8px;
+        }
+
+        .legacy-leaders p {
+            margin-bottom: 15px;
+        }
+
+        /* ============= FOOTER STYLES ============= */
+        footer { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); 
+            color: white; 
+            padding: 50px 20px 20px; 
+            margin-top: 50px; 
+        }
+
+        .footer-container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 35px; 
+            margin-bottom: 30px; 
+        }
+
+        .footer-section h3 { 
+            font-size: 14px; 
+            color: var(--accent); 
+            margin-bottom: 15px; 
+            text-transform: uppercase; 
+            font-weight: 700; 
+        }
+
+        .footer-section ul { 
+            list-style: none; 
+            padding: 0; 
+        }
+
+        .footer-section li { 
+            margin-bottom: 8px; 
+            font-size: 13px; 
+            opacity: 0.95; 
+        }
+
+        .footer-section p {
+            font-size: 13px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .footer-section a { 
+            color: white; 
+            text-decoration: none; 
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover { 
+            color: var(--accent); 
+        }
+
+        .footer-bottom { 
+            text-align: center; 
+            font-size: 12px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.15); 
+            padding-top: 20px; 
+        }
+        
+        /* ============= RESPONSIVE DESIGN ============= */
+        @media (max-width: 768px) {
+            .menu-toggle { 
+                display: block; 
+            }
+
+            .nav-menu { 
+                display: none; 
+                flex-direction: column; 
+                position: absolute; 
+                width: 100%; 
+                background: white; 
+                top: 100%; 
+                left: 0; 
+            }
+
+            .nav-menu.active { 
+                display: flex; 
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                text-align: left;
+                padding: 12px 20px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: var(--light-bg);
+            }
+
+            .nav-item:hover .dropdown-menu {
+                display: block;
+            }
+
+            .grid-2-col, 
+            .grid-2-col.reverse { 
+                grid-template-columns: 1fr; 
+            }
+
+            .title-area h1 { 
+                font-size: 18px; 
+            }
+
+            .logo-area img {
+                height: 70px;
+            }
+
+            .main-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-header-strip {
+                font-size: 1.2rem;
+                padding: 12px 20px;
+            }
+
+            .content-wrapper {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .utility-nav {
+                padding: 8px 10px;
+                gap: 10px;
+                font-size: 11px;
+            }
+
+            .utility-nav span {
+                margin: 0 5px;
+            }
+
+            .title-area h1 {
+                font-size: 14px;
+            }
+
+            .title-area p {
+                font-size: 11px;
+            }
+
+            .logo-area img {
+                height: 50px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-header-strip {
+                font-size: 1rem;
+                padding: 10px 15px;
+                border-left-width: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CONTAINER - Auto-loaded from components -->
+    <div id="header-container"></div>
+
+    <!-- ============= MAIN HEADER ============= -->
+    <div class="main-header">
+        <div class="container">
+            <h1>Our Visionary Founders & Legacy</h1>
+            <p>The Pillars of Sir C.R. Reddy Educational Institutions</p>
+        </div>
+    </div>
+
+    <!-- ============= MAIN CONTENT ============= -->
+    <div class="container">
+
+        <!-- ============= SECTION 1: DAMARAJU VENKATA RAO ============= -->
+        <div class="section-block">
+            <div class="section-header-strip">
+                The Initiator & Founding Chairman
+            </div>
+            <div class="content-wrapper">
+                <div class="grid-2-col reverse">
+                    <div>
+                        <h2 style="font-family: 'Playfair Display', serif; color: var(--primary-brown); margin-bottom: 20px;">Sri Rao Saheb Damaraju Venkata Rao</h2>
+                        <p>In the 1940s, the need for a full-fledged college in Eluru town, the headquarters of West Godavari district, was recognized and fulfilled in 1944 when the then Chairman of the Eluru Municipal Council, the <strong>late Sri Rao Saheb Damaraju Venkata Rao</strong>, took the initiative.</p>
+                        
+                        <p>Under his leadership, the Municipal Council mobilized the sympathy and support of donors from Eluru and surrounding areas to raise a fund of 2 lakh 17 thousand for the opening of the college.</p>
+
+                        <p>Educational institutions play a vital role in transforming the skills of the youth into constructive and useful ones. Sir C. R. Reddy Municipal College was inaugurated on 4th July 1945 under the chairmanship of Rao Saheb Sri Damaraju Venkata Rao.</p>
+                        
+                        <p>The college was formally inaugurated on July 4, 1945, by Sir Cattamanchi Ramalinga Reddy, the distinguished educationist and Vice-Chancellor of Andhra University at that time. The institution was named "Sir C.R. Reddy Municipal College" in honor of the Vice-Chancellor. Sri D.S. Subrahmanyam, a renowned physicist, served as the college's founder principal and established strong academic foundations from its inception.
+
+The college's early trajectory reflected its founder's vision of inclusive education. Initially operating as a second-grade institution, it steadily progressed to first-grade status in 1951 with affiliation for B.Sc Physics and B.Com courses. Over subsequent decades, the college expanded its academic offerings to include numerous undergraduate and postgraduate programs, establishing itself as a premier institution that served rural and socioeconomically backward student populations.</p>
+                    </div>
+                    <div class="portrait-frame">
+                        <img src="../members-images/damarajuvenkatarao.jpeg" alt="Sri Rao Saheb Damaraju Venkata Rao">
+                        <div class="portrait-caption">Sri Rao Saheb Damaraju Venkata Rao</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= SECTION 2: ALLURI BAPINEEDU ============= -->
+        <div class="section-block">
+            <div class="section-header-strip teal">
+                Celebrating the Enduring Legacy of Late Alluri Bapineedu
+            </div>
+            <div class="content-wrapper">
+                <div class="grid-2-col">
+                    <div class="left-column">
+                        <div class="portrait-frame">
+                            <img src="../members-images/alluribapineedu.jpeg" alt="Alluri Bapineedu">
+                            <div class="portrait-caption">Divya Sri Alluri Bapineedu Garu</div>
+                        </div>
+
+                        <div class="teal-box">
+                            <div class="teal-sidebar">
+                                The versatile intellectual<br>Alluri Bapineedu garu
+                            </div>
+                            <div class="teal-content">
+                                <ul>
+                                    <li>Born on 17-03-1911</li>
+                                    <li>Became the President of the District Congress Committee, West Godavari in 1953.</li>
+                                    <li>Became the first Chairman of the Zilla Parishad, West Godavari in 1959.</li>
+                                    <li>Elected to the AP Legislative Assembly in 1955 and in 1962 from Kovvur Assembly Segment.</li>
+                                    <li>Appointed as Chairman of the District Co-operative Marketing Federation, West Godavari during 1968-70.</li>
+                                    <li>Became the Chairman, Zilla Parishad, West Godavari for the second time in 1970.</li>
+                                    <li>Elected to the AP Legislative Council in 1976.</li>
+                                    <li>He was the Chairman of AP Panchyati Raj Chamber during 1968-71.</li>
+                                    <li>Director, APSRTC during 1965-68.</li>
+                                    <li>Served as the President of the Governing Body, Sir C R Reddy College Society, Eluru for 3 Decades (1962-1992).</li>
+                                    <li>He left for heavenly abode on 27th June, 1992.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 style="font-family: 'Playfair Display', serif; color: var(--primary-teal); margin-bottom: 20px;">A Journey of Service and Inspiration</h2>
+                        
+                        <p>Alluri Bapineedu garu played a significant role as one of the prominent educationists in Andhra Pradesh shaping the landscape of educational institutions in West Godavari and neighbouring districts. Building on the groundwork laid by Bapineedu garu, he steered the organization from relying on donations for basic needs to achieving financial independence and expanding its educational footprint.</p>
+
+                        <p>As President, he mobilized donor support and swiftly established numerous institutions from kindergarten to postgraduate levels. These catered to students from underprivileged backgrounds in West Godavari and nearby districts. His leadership introduced professional courses like engineering and MBA, supported by well-developed infrastructure—spacious classrooms, advanced laboratories, well-stocked libraries, computer labs, sports facilities, and a gymnasium—all designed to foster a rich learning environment.</p>
+
+                        <p>The growth of these institutions was driven by the dedication of committed philanthropists, united under his visionary leadership for nearly three decades. Bapineedu garu's lifelong commitment to uplifting weaker sections through education led to the creation of prominent institutions, from Sir C.R. Reddy Public School to Sir C.R. Reddy Engineering College—today celebrated as the Navaratnas. His legacy will continue to inspire future generations as long as education remains a cornerstone of progress.</p>
+
+                        <h4 style="color: var(--primary-brown); margin-top: 25px; margin-bottom: 10px; font-size: 1.2rem;">Philosophy & Impact</h4>
+                        <p><strong>Alluri Bapineedu garu's presidency was the beginning of the sustainable development of Sir C.R. Reddy educational institutions and foundation to became an University.</strong></p>
+                        
+                        <p>Bapineedu garu had a deep admiration for education and firmly believed in the philosophy that increasing literacy levels would lead to the Nation's economic development at a higher level.</p>
+
+                        <p>During his tenure as Chairman of the West Godavari District Parishad, he took responsibility for establishing high schools in various parts of the district, thereby bringing the education system closer to the people. At a time when higher education was largely confined to major cities, Bapineedu garu played a key role in making it accessible to the people of the district. He was a founding member of the governing body that initiated the establishment of Sir C.R. Reddy College in Eluru in 1945. In 1962, he took charge as the Chairman of the governing body of Sir C.R. Reddy College and continued in that role until his last breath in 1992.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= SECTION 3: SIR C.R. REDDY ============= -->
+        <div class="section-block">
+            <div class="section-header-strip">
+                The Founding Vice-Chancellor
+            </div>
+            <div class="content-wrapper">
+                <div class="grid-2-col reverse">
+                    <div>
+                        <h2 style="font-family: 'Playfair Display', serif; color: var(--primary-brown); margin-bottom: 20px;">Sir Cattamanchi Ramalinga Reddy</h2>
+                       <p>Sir Cattamanchi Ramalinga Reddy (10 December 1880 – 24 February 1951), popularly known as Sir C.R. Reddy, was a towering intellectual figure in modern Indian history—an educationist, political theorist, literary critic, poet, economist, and social reformer who profoundly shaped educational and cultural discourse in India during the 20th century. His multifaceted career spanned academia, literary scholarship, political activism, and institutional leadership, making him one of the most influential thought leaders of pre- and post-independence India.</p>
+                        <p><strong>Vision Behind the Institution</strong> </p>
+                        <p>The Sir Cattamanchi Ramalinga Reddy Educational Institutions, commonly referred to as Sir C.R. Reddy Educational Society, represents one of the most significant educational ecosystems in Andhra Pradesh. Founded in 1945, this network of premier educational institutions is headquartered in Eluru, the district headquarters of West Godavari District. The society operates as a multi-institutional educational conglomerate offering comprehensive education spanning from primary school through postgraduate and doctoral levels, serving as a "Mini-University" in the</p>
+                    </div>
+                    <div class="portrait-frame">
+                        <img src="../members-images/sircrreddy.png" alt="Sir Cattamanchi Ramalinga Reddy">
+                        <div class="portrait-caption">Sir Cattamanchi Ramalinga Reddy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= SECTION 4: LEADERSHIP THROUGH DECADES ============= -->
+        <div class="section-block">
+            <div class="section-header-strip blue">
+                Leadership Through the Decades
+            </div>
+            <div class="content-wrapper legacy-leaders">
+                <p>Late <strong>R.V. Rama Rao</strong> had served as the President of Sir C R Reddy college after India attained independence. Later, late <strong>Venkata Krishna Ranga Rao</strong>, Dommeraju Zamindar while serving as the President, supported the faculty and members in every way in the development of the educational institution.</p>
+                
+                <p>The next president late <strong>Veeramachineni Venkata Narayana</strong>, also held the responsibilities as the president of the Andhra Pradesh Congress Committee.</p>
+                
+                <p>Late <strong>Alluri Sarvaraya Chowdhury garu</strong> took charge as the President of the Governing Body from 1992 and served for about 15 years, and contributed to the introduction of new courses and development of infrastructure.</p>
+                
+                <p>Eminent leaders such as Late <strong>S.B.P.B.K. Satyanarayana Rao</strong> was a former Minister in the Central Government, late <strong>Mullapudi Harishchandra Prasad</strong> was an industrialist and NABARD Director, late <strong>Bolla Bulli Ramaiah</strong>, former Union Minister, was a distinguished figure who served as a member of the Governing Body.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER CONTAINER - Auto-loaded from components -->
+    <div id="footer-container"></div>
+
+    <!-- ============= JAVASCRIPT ============= -->
+    <script src="js/load-components.js"></script>
+</body>
+</html>

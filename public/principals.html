@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Principals - Sir C.R. Reddy Educational Institutions</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0; /* important for header/footer layout */
+    background: linear-gradient(135deg, #f2f6fc, #e3ecff);
+    color: #222;
+}
+
+/* Main Content Wrapper */
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 30px 35px;
+}
+
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.principals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+/* Card Design */
+.principal-card {
+    background: #f9fbff;
+    border: 1px solid #dbe4ff;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.principal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.principal-photo img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1565c0;
+    margin-bottom: 12px;
+}
+
+.principal-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d47a1;
+    margin-bottom: 6px;
+}
+
+.institution-name {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header loads here -->
+<div id="header-container"></div>
+
+<main>
+<div class="container">
+    <h1>PRINCIPALS</h1>
+    <div class="subtitle">Sir C.R. Reddy Educational Institutions</div>
+
+    <div class="principals-grid">
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_inter_principal.png" alt="Sri N. Srinivasa Rao">
+            </div>
+            <div class="principal-name">Sri N. Srinivasa Rao</div>
+            <div class="institution-name">Sir C.R. Reddy Intermediate Courses</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_degree_principal.png" alt="Dr. K.A. Rama Raju">
+            </div>
+            <div class="principal-name">Dr. K.A. Rama Raju</div>
+            <div class="institution-name">Sir C.R. Reddy College (Autonomous)</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_pg_principal.png" alt="Dr. V.R.S. Babu Yealamarthi">
+            </div>
+            <div class="principal-name">Dr. V.R.S. Babu Yealamarthi</div>
+            <div class="institution-name">Sir C.R. Reddy PG Courses</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_bed_principal.png" alt="Smt. K. Hima Bindu">
+            </div>
+            <div class="principal-name">Smt. K. Hima Bindu</div>
+            <div class="institution-name">Sir C.R. Reddy College of Education (B.Ed.)</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_school_principal.png" alt="Smt. Sai Kumari Sankar">
+            </div>
+            <div class="principal-name">Smt. Sai Kumari Sankar</div>
+            <div class="institution-name">Sir C.R. Reddy Public School</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_pharmacy_principal.png" alt="Dr. A. Narendra Babu">
+            </div>
+            <div class="principal-name">Dr. A. Narendra Babu</div>
+            <div class="institution-name">Sir C.R. Reddy College of Pharmaceutical Sciences</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_women_inter_principal.png" alt="Smt. V. Rajya Lakshmi">
+            </div>
+            <div class="principal-name">Smt. V. Rajya Lakshmi</div>
+            <div class="institution-name">
+                Sir C.R. Reddy Women’s College<br>
+                <strong>Intermediate Courses</strong>
+            </div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_women_degree_principal.png" alt="Smt. G. Sarala">
+            </div>
+            <div class="principal-name">Smt. G. Sarala</div>
+            <div class="institution-name">
+                Sir C.R. Reddy Women’s College<br>
+                <strong>Degree & PG Courses</strong>
+            </div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_nursing_principal.png" alt="Smt. V. Aruna Kumari">
+            </div>
+            <div class="principal-name">Smt. V. Aruna Kumari</div>
+            <div class="institution-name">Sir C.R. Reddy College of Nursing</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_poly_principal.png" alt="Sri Ch. Satish Babu">
+            </div>
+            <div class="principal-name">Sri Ch. Satish Babu</div>
+            <div class="institution-name">Sir C.R.R. Polytechnic</div>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-photo">
+                <img src="../principals-images/crr_engg_principal.png" alt="Dr. K. Venkateswara Rao">
+            </div>
+            <div class="principal-name">Dr. K. Venkateswara Rao</div>
+            <div class="institution-name">Sir C.R.R. College of Engineering</div>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<!-- Footer loads here -->
+<div id="footer-container"></div>
+
+<!-- Load components -->
+<script src="js/load-components.js"></script>
+
+</body>
+</html>

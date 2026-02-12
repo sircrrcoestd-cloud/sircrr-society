@@ -335,6 +335,130 @@
             line-height: 1.3;
         }
 
+        /* ============= NEW: SIR C.R. REDDY ABOUT SECTION ============= */
+        .founder-section {
+            margin: 60px 0;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .founder-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 45px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .founder-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+            border-radius: 2px;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 40px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .founder-image-container {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.15);
+            border: 3px solid var(--accent);
+        }
+
+        .founder-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .founder-info {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary);
+        }
+
+        .founder-info h3 {
+            font-size: 26px;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .founder-info .founder-designation {
+            font-size: 15px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .founder-info p {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .founder-highlights {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .founder-highlights h4 {
+            font-size: 18px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .founder-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .founder-highlights li {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .founder-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
         /* ============= HISTORY SECTION (NEW PROFESSIONAL LAYOUT) ============= */
 
         .history-section {
@@ -671,6 +795,11 @@
             .history-layout {
                 grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
             }
+
+            .founder-content {
+                grid-template-columns: 350px 1fr;
+                gap: 30px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -770,6 +899,20 @@
 
             .history-highlight-card {
                 position: static;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .founder-image-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .founder-info {
+                padding: 25px;
             }
         }
 
@@ -960,6 +1103,36 @@
 
             .history-highlight-card {
                 padding: 20px 16px;
+            }
+
+            .founder-section {
+                padding: 35px 10px;
+                margin: 35px 0;
+            }
+
+            .founder-title {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+
+            .founder-info {
+                padding: 20px;
+            }
+
+            .founder-info h3 {
+                font-size: 22px;
+            }
+
+            .founder-info p {
+                font-size: 14px;
+            }
+
+            .founder-highlights h4 {
+                font-size: 16px;
+            }
+
+            .founder-highlights li {
+                font-size: 13px;
             }
         }
     </style>
@@ -1165,6 +1338,47 @@
                                 <p>SIR C R Reddy College of Nursing</p>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= NEW: ABOUT SIR C.R. REDDY SECTION ============= -->
+        <section class="founder-section" id="founder">
+            <h2 class="founder-title">ABOUT SIR CATTAMANCHI RAMALINGA REDDY</h2>
+            <div class="founder-content">
+                <!-- Left: Image -->
+                <div class="founder-image-container">
+                    <img src="../images/sircrreddystatue.png" alt="Sir C.R. Reddy Statue">
+                </div>
+
+                <!-- Right: Information -->
+                <div class="founder-info">
+                    <h3>Sir Cattamanchi Ramalinga Reddy</h3>
+                    <p class="founder-designation">Eminent Educationist & Former Vice-Chancellor of Andhra University</p>
+                    
+                    <p>
+                        Sir Cattamanchi Ramalinga Reddy was a distinguished educationist, visionary leader, and a pioneer in the field of higher education in Andhra Pradesh. Born on March 1, 1880, in Bobbili, he dedicated his entire life to the advancement of education and social welfare.
+                    </p>
+                    
+                    <p>
+                        He served as the Vice-Chancellor of Andhra University from 1931 to 1941, during which he transformed the institution into a center of academic excellence. His contributions to education were recognized when he was knighted by the British Government in 1935, earning him the title "Sir."
+                    </p>
+                    
+                    <p>
+                        On July 4, 1945, Sir C.R. Reddy inaugurated our college, which was proudly named after him in recognition of his invaluable contributions to education. His vision and principles continue to guide our institution, inspiring generations of students to pursue excellence and serve society with dedication.
+                    </p>
+
+                    <div class="founder-highlights">
+                        <h4>Key Contributions & Legacy</h4>
+                        <ul>
+                            <li>Served as Vice-Chancellor of Andhra University (1931-1941)</li>
+                            <li>Knighted by the British Government in 1935</li>
+                            <li>Pioneered modern education system in Andhra Pradesh</li>
+                            <li>Inaugurated our college on July 4, 1945</li>
+                            <li>Championed value-based education and social responsibility</li>
+                            <li>Established multiple educational institutions across the region</li>
+                        </ul>
                     </div>
                 </div>
             </div>
